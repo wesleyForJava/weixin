@@ -1,0 +1,4 @@
+[INFO ] 2018-07-08 15:48:32,321     com.souvc.weixin.main.MenuManager     - 菜单创建成功！
+[INFO ] 2018-07-08 15:58:25,970     com.souvc.weixin.main.MenuManager     - 菜单创建成功！
+[INFO ] 2018-07-08 16:00:09,797     com.souvc.weixin.main.MenuManager     - 菜单创建成功！
+[ERROR] 2018-07-08 16:10:48,494            com.souvc.weixin.main.test     - 用户null已取消关注

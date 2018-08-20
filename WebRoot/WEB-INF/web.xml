@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>coreServlet</servlet-name>
+        <servlet-class>
+            com.souvc.weixin.servlet.CoreServlet
+        </servlet-class>
+    </servlet>
+
+    <!-- url-pattern中配置的/coreServlet用于指定该Servlet的访问路径 -->
+    <servlet-mapping>
+        <servlet-name>coreServlet</servlet-name>
+        <url-pattern>/coreServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>initServlet</servlet-name>
+        <servlet-class>
+            com.souvc.weixin.servlet.InitServlet
+        </servlet-class>
+        <!-- 配置获取access_token所需参数appid和appsecret -->
+        <init-param>
+            <param-name>appid</param-name>
+            <param-value>wx0675452e015db493</param-value>
+        </init-param>
+        <init-param>
+            <param-name>appsecret</param-name>
+            <param-value>028059ce67786405331254e895b769ea</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    
+     <servlet>
+        <servlet-name>oauthServlet</servlet-name>
+        <servlet-class>com.souvc.weixin.servlet.OAuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>oauthServlet</servlet-name>
+        <url-pattern>/oauthServlet</url-pattern>
+    </servlet-mapping>
+     <!--  <servlet>
+      <servlet-name>wxCallBack</servlet-name>
+       <servlet-class>com.souvc.weixin.servlet.CallBackServlet</servlet-class>
+      </servlet>
+      <servlet-mapping>
+      <servlet-name>wxCallBack</servlet-name>
+      <url-pattern>/wxCallBack</url-pattern>
+      </servlet-mapping> -->
+</web-app>
